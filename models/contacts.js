@@ -6,12 +6,8 @@ const path = require("path");
 const contactsPath = path.resolve("models", "contacts.json");
 
 async function listContacts() {
-  try {
-    const data = await fs.readFile(contactsPath);
-    return JSON.parse(data);
-  } catch (error) {
-    console.log(error);
-  }
+  const data = await fs.readFile(contactsPath);
+  return JSON.parse(data);
 }
 
 async function getContactById(contactId) {
@@ -52,7 +48,7 @@ const updateContact = async (contactId, body) => {
   }
   allContacts[index] = { id: contactId, ...body };
   await fs.writeFile(contactsPath, JSON.stringify(allContacts, null, 2));
-  return allContacts[index]
+  return allContacts[index];
 };
 
 module.exports = {
