@@ -13,6 +13,4 @@ const deleteContactById = async (req, res, next) => {
   });
 };
 
-module.exports = {
-  deleteContactById,
-};
+module.exports = deleteContactById;

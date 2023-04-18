@@ -1,4 +1,6 @@
 const { Schema, model } = require("mongoose");
+const handleMongooseError = require("../utils/handleMongooseError");
+
 
 const contactsSchema = new Schema({
     name: {
@@ -15,7 +17,14 @@ const contactsSchema = new Schema({
         type: Boolean,
         default: false,
     },
+    owner: {
+        type: Schema.Types.ObjectId,
+        ref: "user",
+        required: true,
+    }
 });
+
+contactsSchema.post("save", handleMongooseError);
 
 const Contact = model("contact", contactsSchema);
 
