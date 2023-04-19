@@ -11,6 +11,4 @@ const updateContactById = async (req, res) => {
   res.json(result);
 };
 
-module.exports = {
-  updateContactById,
-};
+module.exports = updateContactById;

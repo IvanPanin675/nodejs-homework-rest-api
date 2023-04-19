@@ -11,6 +11,4 @@ const getContactById = async (req, res, next) => {
   res.json(result);
 };
 
-module.exports = {
-  getContactById,
-};
+module.exports = getContactById;
