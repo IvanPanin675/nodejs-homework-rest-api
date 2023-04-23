@@ -1,7 +1,12 @@
 const authenticate = require('./authenticate');
+const avatarChanges = require('./avatarChanges');
 const subscriptionMiddware = require('./subscriptionMiddware');
-subscriptionMiddware
+const upload = require('./upload');
+
+
 module.exports = {
     authenticate,
-    subscriptionMiddware
+    subscriptionMiddware,
+    upload,
+    avatarChanges
 }

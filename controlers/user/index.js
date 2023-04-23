@@ -4,6 +4,8 @@ const login = require("./login");
 const logout = require("./logout");
 const patchSubscription = require("./patchSubscription");
 const register = require("./register");
+const updateAvatar = require("./updateAvatar");
+
 
 
 module.exports = {
@@ -11,5 +13,6 @@ module.exports = {
   login: ctrlWrapper(login),
   current: ctrlWrapper(current),
   logout: ctrlWrapper(logout),
-  patchSubscription: ctrlWrapper(patchSubscription)
+  patchSubscription: ctrlWrapper(patchSubscription),
+  updateAvatar: ctrlWrapper(updateAvatar)
 };
