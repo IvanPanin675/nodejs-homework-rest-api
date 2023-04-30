@@ -17,7 +17,7 @@ const updateAvatar = async (req, res) => {
     .then((image) => {
       image.resize(250, 250).write(resultUpload);
     })
-    .catch((err) => {
+    .catch(() => {
       throw HttpError(400, "Use type image: jpeg, png, bmp, tiff, gif");
     });
   const avatarURL = path.join("avatars", avatarName);

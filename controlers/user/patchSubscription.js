@@ -4,7 +4,7 @@ const patchSubscription = async (req, res) => {
   const { _id } = req.user;
     const { subscription } = req.body;
     
-   const result = await User.findByIdAndUpdate(_id, { subscription: subscription });
+   await User.findByIdAndUpdate(_id, { subscription: subscription });
 
   res.json(subscription);
 };

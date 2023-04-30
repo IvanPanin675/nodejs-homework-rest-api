@@ -4,7 +4,7 @@ const User = require('../models/user-model');
 
 // записується в env
 const SECRET_KEY = '1234556';
-
+//
 const authenticate = async (req, res, next) => {
     const { authorization = "" } = req.headers;
     const [bearer, token] = authorization.split(" ");
